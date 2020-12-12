@@ -114,9 +114,9 @@ L.LLLLL.LL"""
     realfloor = list(map(list,load_text("input/d11_pt1.txt").split()))
     # print_conway(realfloor)
     
-    # final = run_until_convergence(realfloor)
-    # ans1 = count_occupied(final)
-    # print(f"Answer part 1: {ans1}")
+    final = run_until_convergence(realfloor)
+    ans1 = count_occupied(final)
+    print(f"Answer part 1: {ans1}")
     
     final = run_until_convergence(testfloor,fn=step_conway2)
     print_conway(final)
