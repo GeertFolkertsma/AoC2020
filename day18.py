@@ -46,7 +46,7 @@ if __name__ == "__main__":
     
     from aoc_utils import load_list
     homework = load_list("input/d18_pt1.txt")
-    ans1 = sum(map(calculate, homework))
+    ans1 = sum(calculate(s) for s in homework)
     print(f"Answer to part 1: {ans1}")
     
     # part 2: easy-peasy! just use truediv for +
@@ -55,5 +55,5 @@ if __name__ == "__main__":
     for t in testcases:
         assert t[2] == calculate(t[0],True), f"Test case {t} failed"
     
-    ans2 = sum(map(lambda s: calculate(s,True), homework))
+    ans2 = sum(calculate(s,True) for s in homework)
     print(f"Answer to part 2: {ans2}")
