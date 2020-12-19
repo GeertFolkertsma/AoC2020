@@ -1,3 +1,3 @@
 
 def count_valid(it,validator):
-    return sum(map(validator,it))
+    return sum(1 for i in it if validator(i))
